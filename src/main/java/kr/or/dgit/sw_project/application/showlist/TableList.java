@@ -5,19 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
-import kr.or.dgit.sw_project.dto.JoinFromSale;
 import kr.or.dgit.sw_project.dto.ViewCategorySale;
 import kr.or.dgit.sw_project.dto.ViewClientSale;
 import kr.or.dgit.sw_project.dto.ViewOrderDateSale;
 import kr.or.dgit.sw_project.dto.ViewSofrwareSale;
-import kr.or.dgit.sw_project.service.ViewClientSaleService;
 
 public class TableList extends JPanel{
 

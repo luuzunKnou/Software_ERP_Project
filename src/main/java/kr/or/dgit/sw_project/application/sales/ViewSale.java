@@ -1,7 +1,5 @@
 package kr.or.dgit.sw_project.application.sales;
 
-import java.awt.Component;
-import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -18,12 +16,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import kr.or.dgit.sw_project.dto.Client;
 import kr.or.dgit.sw_project.dto.JoinFromSale;
-import kr.or.dgit.sw_project.dto.JoinFromSoftware;
 import kr.or.dgit.sw_project.dto.Sale;
 import kr.or.dgit.sw_project.dto.Software;
-import kr.or.dgit.sw_project.service.ClientService;
 import kr.or.dgit.sw_project.service.JoinFromSaleService;
 import kr.or.dgit.sw_project.service.SaleService;
 import kr.or.dgit.sw_project.service.SoftwareService;
@@ -56,7 +51,7 @@ public class ViewSale extends JPanel implements ActionListener{
 		gbc_label.gridwidth = 5;
 		add(label, gbc_label);
 
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/sale.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/sale.png"));
 		label.setIcon(icon);	
 		
 		pContent = new ContentSale();

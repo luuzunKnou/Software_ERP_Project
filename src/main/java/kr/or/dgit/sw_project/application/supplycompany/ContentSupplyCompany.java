@@ -4,6 +4,8 @@ import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 import javax.swing.JButton;
@@ -13,12 +15,8 @@ import javax.swing.border.EtchedBorder;
 
 import erp_myframework.TextFieldPanel;
 import kr.or.dgit.sw_project.application.address.ViewAddress;
-import kr.or.dgit.sw_project.dto.Delivery;
 import kr.or.dgit.sw_project.dto.SupplyCompany;
-import kr.or.dgit.sw_project.service.DeliveryService;
 import kr.or.dgit.sw_project.service.SupplyCompService;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class ContentSupplyCompany extends JPanel implements ActionListener {
    private JTextField textField;

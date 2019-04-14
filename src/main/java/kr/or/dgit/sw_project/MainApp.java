@@ -65,8 +65,9 @@ public class MainApp extends JFrame implements ActionListener {
 
 	public MainApp() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/login.png");
-
+		//ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/login.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/login.png"));
+		System.out.println(getClass().getClassLoader().getResource("/login.png"));
 		//1920, 1080 
 		setBounds(750, 350, 550, 270);
 		contentPane = new JPanel(){
@@ -133,6 +134,8 @@ public class MainApp extends JFrame implements ActionListener {
 		btnNewButton = new JButton("초기화");
 		btnNewButton.addActionListener(this);
 		panelButton.add(btnNewButton);
+		
+		setResizable(false);
 	}
 	
 	public void showMainApp(){
@@ -179,7 +182,6 @@ public class MainApp extends JFrame implements ActionListener {
 		JoinOnCard joinOnCard = new JoinOnCard();
 		panelPassword.setPwValue("");
 		joinOnCard.setMainApp(MainApp.this);
-		dispose();
 	}
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
 		String str = JOptionPane.showInputDialog("비밀번호를 입력해 주세요");

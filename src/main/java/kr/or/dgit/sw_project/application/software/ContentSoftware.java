@@ -27,9 +27,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 import javax.swing.border.EtchedBorder;
 
 import erp_myframework.ComboPanel;
@@ -111,8 +109,11 @@ public class ContentSoftware extends JPanel implements MouseListener {
 		lblImage.setPreferredSize(new Dimension(110, 110));
 		lblImage.addMouseListener(this);
 
-		File file = new File(System.getProperty("user.dir")+"/build/resources/main/softwareimage/select.png");
-		setImg(file);
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/select.png"));
+		lblImage.setIcon(icon);
+		
+		//File file = new File(getClass().classLoader.getResource("softwareimage/select.png")));
+		//setImg(file);
 
 		GridBagConstraints gbc_lblImage = new GridBagConstraints();
 		gbc_lblImage.fill = GridBagConstraints.BOTH;
@@ -182,8 +183,13 @@ public class ContentSoftware extends JPanel implements MouseListener {
 		tfpSWName.setTfValue("");
 		tfpSwPrice.setTfValue("");
 		tfpGroupName.setSelectedItem("선택해주세요");
-		File file = new File(System.getProperty("user.dir")+"/build/resources/main/softwareimage/select.png");
-		setImg(file);
+		
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/select.png"));
+		lblImage.setIcon(icon);
+
+//		String path = getClass().getClassLoader().getResource("softwareimage/select.png").toString();
+//		File file = new File(path.substring(path.indexOf("C")));
+//		setImg(file);
 	}
 
 	public void setObject(Object[] swObj){ //클릭된 테이블의 인덱스에 있는 컬럼들을 가져와 각각의 입력목록에 삽입

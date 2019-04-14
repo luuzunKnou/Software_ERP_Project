@@ -1,7 +1,6 @@
 package kr.or.dgit.sw_project.application.showlist;
 
 import java.awt.BorderLayout;
-import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -67,7 +66,7 @@ public class ViewList extends JFrame implements ActionListener, ItemListener {
 		gbc_label.gridwidth = 5;
 		contentPane.add(label, gbc_label);
 
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/list.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/list.png"));
 		label.setIcon(icon);	
 		
 		pContent = new ContentList();

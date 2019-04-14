@@ -63,7 +63,7 @@ public class ViewAddress extends JFrame implements ActionListener {
 		gbc_label.gridwidth = 5;
 		getContentPane().add(label, gbc_label);
 		
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/zipcode.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/zipcode.png"));
 		label.setIcon(icon);	
 		
 		pContent = new ContentAddress();

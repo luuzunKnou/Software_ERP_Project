@@ -1,7 +1,5 @@
 package kr.or.dgit.sw_project.application.supplycompany;
 
-import java.awt.BorderLayout;
-import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -13,16 +11,12 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import javax.swing.border.EmptyBorder;
 
-import kr.or.dgit.sw_project.dto.Client;
 import kr.or.dgit.sw_project.dto.SupplyCompany;
-import kr.or.dgit.sw_project.service.ClientService;
 import kr.or.dgit.sw_project.service.SupplyCompService;
 
 public class ViewSupplyCompany extends JPanel implements ActionListener{
@@ -53,7 +47,7 @@ public class ViewSupplyCompany extends JPanel implements ActionListener{
 		gbc_label.gridwidth = 5;
 		add(label, gbc_label);
 		
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/supply.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/supply.png"));
 		label.setIcon(icon);	
 		
 		pContent = new ContentSupplyCompany();

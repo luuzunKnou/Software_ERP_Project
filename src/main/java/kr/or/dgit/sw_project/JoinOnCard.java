@@ -60,10 +60,12 @@ public class JoinOnCard extends JFrame implements KeyListener {
 			Members user = MemberShipService.getInstance().selectMembersByID(
 					new Members(tfpBarcode.getTfValue()));
 			if(user!=null){
+				System.out.println("Login Success");
 				MainApp.permission = user.getMemPermission();
 				MainTab tabbedSale = new MainTab();
 				tabbedSale.setMainApp(mainApp);
 				tfpBarcode.setTfValue("");
+				mainApp.dispose();
 				dispose();
 			}else{
 				JOptionPane.showMessageDialog(null, "회원 정보가 존재하지 않습니다.");

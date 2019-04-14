@@ -52,7 +52,7 @@ public class ViewMemberShip extends JFrame implements ActionListener {
 		gbc_label.gridwidth = 5;
 		getContentPane().add(label, gbc_label);
 		
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/sign.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/sign.png"));
 		label.setIcon(icon);	
 		
 		pContent = new ContentMemberShip();

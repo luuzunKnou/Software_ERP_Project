@@ -9,11 +9,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-import kr.or.dgit.sw_project.dto.Client;
-import kr.or.dgit.sw_project.dto.JoinFromSale;
 import kr.or.dgit.sw_project.dto.SupplyCompany;
-import kr.or.dgit.sw_project.service.ClientService;
-import kr.or.dgit.sw_project.service.SupplyCompService;
 
 public class TableSupplyCompany extends JPanel {
    private JTable table;

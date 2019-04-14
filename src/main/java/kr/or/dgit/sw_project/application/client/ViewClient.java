@@ -52,7 +52,8 @@ public class ViewClient extends JPanel implements ActionListener {
 		gbc_label.gridwidth = 5;
 		add(label, gbc_label);
 		
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/client.png");
+		//ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/client.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/Client.png"));
 		label.setIcon(icon);	
 		
 		pContent = new ContentClient();

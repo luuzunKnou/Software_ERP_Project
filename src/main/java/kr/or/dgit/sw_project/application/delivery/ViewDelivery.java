@@ -50,7 +50,7 @@ public class ViewDelivery extends JPanel implements ActionListener{
 		gbc_label.gridwidth = 5;
 		add(label, gbc_label);
 
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/delivery.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/delivery.png"));
 		label.setIcon(icon);	
 		
 		pContent = new ContentDelivery();

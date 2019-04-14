@@ -53,7 +53,7 @@ public class ViewCategory extends JPanel implements ActionListener{
 		gbc_label.gridwidth = 5;
 		add(label, gbc_label);
 		
-		ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+"/build/resources/main/softwareimage/category.png");
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("softwareimage/category.png"));
 		label.setIcon(icon);	
 
 		pContent = new ContentCategory();
