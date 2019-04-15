@@ -26,7 +26,14 @@ import kr.or.dgit.sw_project.service.JoinFromSoftwareService;
 import kr.or.dgit.sw_project.service.SoftwareService;
 
 public class InitSettingService {
+	
+//	public String EXPORT_IMPORT_DIR = getClass().getClassLoader().getResource("BackupFiles/").toString().substring(5);
+//	public String ADDRESS_IMPORT_DIR = getClass().getClassLoader().getResource("AddrDataFiles/").toString().substring(5);
+//	public String EXPORT_IMAGES_DIR = getClass().getClassLoader().getResource("BackupImages/").toString().substring(5);
+	//luuzun_log::/C:/Users/luuzun/git/Software_ERP_Project/bin/AddrDataFiles/
+
 	public void initSetting(int swt, int init) {
+				
 		File buFile = new File(Config.EXPORT_IMPORT_DIR);// 현재 작업하고 있는 프로젝트 경로안의 BackupFiles폴더
 		File[] buFiles = buFile.listFiles(); // BackupFiles 안에 있는 파일들을 배열에 넣음
 		
@@ -231,6 +238,7 @@ public class InitSettingService {
 	
 	private void loadPostData(){
 		File file = new File(Config.ADDRESS_IMPORT_DIR);
+		System.out.println("luuzun_log::"+Config.ADDRESS_IMPORT_DIR);
 		File[] fileNames = file.listFiles();
 		String sql = "LOAD data LOCAL INFILE '%s' INTO table  address   character set 'euckr'  fields TERMINATED by '|' IGNORE 1 lines "
 				+ "(@zipcode, @sido, @d, @sigungu , @d, @d, @d, @d, @doro, @d, @d, @building1, @building2, @d, @d, @d, @d, @d, @d ,@d, @d, @d, @d, @d, @d, @d) "

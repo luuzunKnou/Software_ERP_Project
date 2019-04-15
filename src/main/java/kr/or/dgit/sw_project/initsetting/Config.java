@@ -231,15 +231,9 @@ public class Config {
 			
 	};
 						
-//	public static final String EXPORT_IMPORT_DIR = System.getProperty("user.dir")+ "\\BackupFiles\\";
-//	
-//	public static final String ADDRESS_IMPORT_DIR = System.getProperty("user.dir")+ "\\AddrDataFiles\\";
-//	
-//	public static final String EXPORT_IMAGES_DIR = System.getProperty("user.dir")+ "\\BackupImages\\";
-
-	public static final String EXPORT_IMPORT_DIR = System.getProperty("user.dir")+ "\\BackupFiles\\";
-	public static final String ADDRESS_IMPORT_DIR = System.getProperty("user.dir")+ "\\AddrDataFiles\\";
-	public static final String EXPORT_IMAGES_DIR = System.getProperty("user.dir")+ "\\BackupImages\\";
+	public static final String EXPORT_IMPORT_DIR = "c:\\sw_erp\\BackupFiles\\";
+	public static final String ADDRESS_IMPORT_DIR = "c:\\sw_erp\\AddrDataFiles\\";
+	public static final String EXPORT_IMAGES_DIR = "c:\\sw_erp\\BackupImages\\";
 			
 	public static final String CREATE_ADMIN= 
 			"INSERT INTO members(mem_id, mem_name, mem_password, mem_mail, mem_permission, mem_isExist)   "
